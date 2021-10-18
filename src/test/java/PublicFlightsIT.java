@@ -27,9 +27,10 @@ public class PublicFlightsIT {
 
     @Test
     public void TestFlightsIata() {
+
         publicFlights.forEach(flight -> {
-            System.out.println("IATA code: " + flight.get("prefixIATA") + " , Destination: "
-                    + flight.get("route.destinations") + ", Departure time: "
+            System.out.println("IATA code: " + flight.get("prefixIATA") + " ; Destinations: "
+                    + String.join(",", (List)((Map) (flight.get("route"))).get("destinations")) + " ; Departure time: "
                     + flight.get("scheduleTime"));
         });
 
