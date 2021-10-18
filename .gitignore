@@ -1,9 +1,9 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-
 target/
 *.class
 .idea/
 *.iml
+src/test/resources/
 *.apikey
